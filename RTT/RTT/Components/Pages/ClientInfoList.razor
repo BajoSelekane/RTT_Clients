@@ -1,0 +1,32 @@
+﻿@page "/clientInfo"
+@attribute [StreamRendering(true)]
+@inject IClientInfoService ClientInfoService
+<h3>ClientInfoList</h3>
+@if (clientInfos == null)
+{
+    <span>Loading...</span>
+}
+else if (clientInfos.Count ==0)
+{
+    <span>No Clients Info Found.</span>
+}
+else
+{
+    <ul>
+        @foreach (var client in clientInfos)
+        {
+            <li>@client.Name</li>
+        }
+    </ul>
+}
+
+
+@code {
+    List<ClientInfo>? clientInfos = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        clientInfos = await ClientInfoService.GetAllClientInfo();
+    }
+}
+ 
