@@ -4,6 +4,7 @@ using RTT.Components;
 using RTT.Data;
 using RTT.Services;
 using System;
+using BaseLibrary.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RTT.Data;
-using RTT.Entities;
+using BaseLibrary.Entities;
 
 namespace RTT.Controller
 {

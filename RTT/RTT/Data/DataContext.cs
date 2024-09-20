@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RTT.Entities;
+using BaseLibrary.Entities;
 
 namespace RTT.Data
 {
